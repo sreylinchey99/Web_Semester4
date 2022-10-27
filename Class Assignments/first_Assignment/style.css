@@ -1,0 +1,15 @@
+.calculator_card{
+    background-color: rgb(185, 68, 68);
+    width: 50vw;
+    height: 30vw;
+    border-radius: 1em;
+    margin-left: 24vw;
+    border: 7px solid rgb(255, 255, 255);
+    
+}
+.header .img img{
+    width: 17vw;
+    height: 12vw;
+    margin-left: 5vw;   
+}
+

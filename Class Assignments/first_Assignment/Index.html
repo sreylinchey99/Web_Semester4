@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<body style="background-color: #d6c9c6;">
+    <div class="header">
+        <!-- <div class="img" ><img src="welcome.png" alt=""></div> -->
+        <div class="welcome_text"><h1 style="padding: 2vw; margin-left: 29vw; color: rgb(119, 35, 35);">Welcome to My Simple Calculator</h1></div>
+        <hr style="width: 50vw;">
+        <h1></h1>
+    </div> 
+    <div class="calculator_card">
+        <div ng-app="Calculator_App" ng-controller="CalculatorController"  style="padding: 5vw; font-size: 1.3vw; font-family:'Times New Roman'; color:rgb(255, 255, 255)">
+            Input first number : <input type="number" ng-model="first_num" placeholder="  Input any digit number" style="width: 20vw; height: 2vw;font-size: 0.98vw;"><br> <br> <br>
+            Input second number : <input type="number" ng-model="second_num" placeholder="  Input any digit number" style="width: 20vw; height: 2vw; font-size: 0.98vw;"><br> <br> <br>
+            Select an operation:
+                <select ng-model="operator">
+                    <option>+</option>
+                    <option>*</option>
+                    <option>-</option>
+                    <option>/</option>
+                </select></p> <br><br>
+            Result Displayed : {{result()}} 
+            
+        </div>
+    </div>
+    <script>
+        var app = angular.module('Calculator_App', []);
+        app.controller('CalculatorController', function($scope) {
+            $scope.result = function(){
+                if ($scope.operator == '+') {
+                    return $scope.first_num + $scope.second_num;
+                }
+                if ($scope.operator == '-') {
+                    return $scope.first_num - $scope.second_num;
+                }
+                if ($scope.operator == '*') {
+                    return $scope.first_num * $scope.second_num;
+                }
+                if ($scope.operator == '/') {
+                    return $scope.first_num / $scope.second_num;
+                }
+            };
+        });
+    </script>
+</body>
+</html>
