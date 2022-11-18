@@ -1,0 +1,20 @@
+{
+  "name": "assignment4",
+  "version": "1.0.0",
+  "description": "assignment",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "author": "sreylinchey",
+  "license": "ISC",
+  "dependencies": {
+    "db": "^3.4.0",
+    "express": "^4.18.2",
+    "grep": "^0.1.0",
+    "mongo": "^0.1.0",
+    "mongodb": "^4.12.0",
+    "mongoose": "^6.7.2",
+    "moongoose": "^0.0.5"
+  }
+}
